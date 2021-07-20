@@ -412,5 +412,16 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $('.features .nav-pills li').on('click', function(e) {
+        let tab = $(this);
+        e.preventDefault();
+        tab.addClass('active').siblings().removeClass('active');
+        
+        $('.features .feature').each(function (element) {
+          $(this).data('filter') === tab.children().text() && $(this).show().siblings().not(tab.parent().parent()).hide();
+        });
+      });
+    </script>    
   </body>
 </html>
