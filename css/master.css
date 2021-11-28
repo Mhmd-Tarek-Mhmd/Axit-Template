@@ -85,24 +85,16 @@ input.form-control {
 }
 
 .special-heading {
-  margin-bottom: 70px;
+  margin: 0;
   font-size: 36px;
   color: #212121;
   font-family: "Raleway";
 }
-.special-heading .separator {
+.special-heading + .separator {
   margin: 30px auto;
 }
-
-.center-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.space-between-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.special-heading ~ p {
+  margin-bottom: 70px;
 }
 
 /*
@@ -421,24 +413,36 @@ form.panel .panel-footer button:hover {
 /*
   About Section
 */
-@media (max-width: 991px) {
-  .about-content > div {
-    margin-bottom: 35px;
-  }
-}
 .about i {
   color: var(--main-color);
   border: 2px solid;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.3s;
   line-height: 1.8em;
+  will-change: color, background-color;
 }
 .about i:hover {
-  background-color: var(--main-color);
   color: #fff;
+  background-color: var(--main-color);
 }
 .about .title {
-  margin: 25px 0;
+  margin: 29px 0 25px;
+}
+
+@media (max-width: 991px) {
+  .about-content > div:nth-child(2) {
+    margin: 35px 0;
+  }
+}
+.about-content > div p {
+  margin-bottom: 0;
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .about-content > div p {
+    width: 50%;
+    margin: auto;
+  }
 }
 
 /*
