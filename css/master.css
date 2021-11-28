@@ -1,11 +1,15 @@
-/*-------------- Global Style --------------*/
+/*
+  Global Style
+*/
 html {
-  font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
-
   --main-color: #ff8b38;
   --text-color: #86878b;
   --main-padding: 70px 0;
+}
+body {
+  color: var(--text-color);
+  font: 400 14px "Open Sans", sans-serif;
 }
 main section {
   padding: var(--main-padding);
@@ -21,6 +25,9 @@ input.form-control {
   border-bottom: 1px solid #ccc;
   border-radius: 0;
   box-shadow: none;
+  font: inherit;
+  width: 100%;
+  height: 100%;
 }
 ::placeholder {
   color: #bdbdbd;
@@ -39,7 +46,9 @@ input.form-control {
   border-color: transparent;
 }
 
-/*-------------- Mini framework --------------*/
+/*
+  Mini framework
+*/
 .overlay {
   position: absolute;
   height: 100%;
@@ -54,12 +63,9 @@ input.form-control {
   margin: 30px 0;
 }
 .title {
+  color: #333;
   font-size: 20px;
   font-weight: 700;
-}
-.paragraph {
-  color: var(--text-color);
-  font-size: 14px;
 }
 
 .special-heading {
@@ -72,159 +78,189 @@ input.form-control {
   margin: 30px auto;
 }
 
-/*-------------- Page Style --------------*/
-
-/*------ Home Section ------*/
-.home .logo {
-  font-weight: 800;
-  color: #fff;
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.home .logo span {
-  font-weight: 300;
-  color: var(--main-color);
+.space-between-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*
+  Home Section 
+*/
+.home {
+  min-height: 100vh;
 }
 
 /* [1] Nav Bar */
-nav {
-  border-radius: 0 !important;
-  margin: 0 !important;
+nav .logo {
+  width: 79px;
+  height: 27px;
 }
-nav li {
-  margin-left: 5px;
+nav.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  min-height: 71px;
 }
-nav li a {
-  color: #fff !important;
+nav.navbar-inverse {
+  border: none;
+  background-color: #000;
+}
+nav .navbar-brand {
+  padding: 20px 15px;
+}
+nav .navbar-toggle {
+  margin-top: 18px;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
   opacity: 0.7;
   font-weight: 600;
 }
-nav li a:hover,
-nav li.active a {
-  background-color: var(--main-color) !important;
+.navbar-inverse .navbar-nav > li > a:hover {
   opacity: 1;
+  background-color: var(--main-color);
+}
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 /* [2] Header */
 header {
-  position: relative;
-  min-height: 250px;
-  height: calc(100vh - (52px + 125px));
-  background-image: url(../imgs/header.jpeg);
-  background-size: cover;
   color: #fff;
-}
-header .separator {
-  margin: 20px 0 30px;
-  background-color: #fff;
-}
-header .text,
-header .form {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  background-size: cover;
+  min-height: calc(100vh - (71px + 106px));
+  background-image: url(../imgs/header.jpeg);
 }
 @media (max-width: 991px) {
   header {
     text-align: center;
   }
-  header .separator {
-    margin: 20px auto 30px;
-  }
-  header .text {
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
+}
+header .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 767px) {
+  header .container {
     width: 100%;
   }
 }
-@media (min-width: 992px) {
-  header .form {
-    right: 0;
-  }
+header .logo {
+  width: 175px;
+  height: 60px;
 }
-
-/* [1] Text */
-header .text h1 {
-  font-size: 60px;
+header .separator {
+  background-color: #fff;
 }
-header .text h1 + p {
-  font-family: "Raleway";
-  font-size: 36px;
-  color: #fff;
-}
-header .text h1 + p ~ p {
-  opacity: 0.8;
-  margin-bottom: 40px;
-}
-@media (max-width: 991px) {
-  header .text h1 {
-    font-size: 40px;
-  }
-  header .text h1 + p {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  header .text h1 + p ~ p {
-    display: none;
-  }
-}
-header .text button {
+header button {
   font-size: 15px;
   font-weight: 600;
 }
 
-/* [2] Form */
-header form.panel {
+/* Text */
+header .text h1 {
+  margin: 0;
+}
+header .text h1 + p {
+  margin: 33px 0 36px;
+  font: 400 36px "Raleway";
+}
+header .text div p {
+  opacity: 0.8;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 44px;
+}
+@media (min-width: 1200px) {
+  header .text div p {
+    width: 61%;
+  }
+}
+
+/* Panel */
+form.panel {
+  margin: 0;
   border: none;
-  margin: auto;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 374px;
+  float: right;
 }
-header form h3 {
-  font-weight: 700;
+form.panel .panel-heading {
+  height: 54px;
+  padding-top: 15px;
 }
-header form h3 span {
+form.panel .panel-heading h3 {
+  margin: 0;
+}
+form.panel .panel-heading h3 span {
   color: var(--main-color);
-  font-size: 20px;
 }
-header form .panel-footer {
-  background-color: var(--main-color);
+
+form.panel .panel-body {
+  padding: 29px 44px 49px 45px;
+}
+form.panel .panel-body .form-group {
+  height: 31px;
+  margin-bottom: 0;
+}
+form.panel .panel-body .form-group:first-child {
+  margin-bottom: 36px;
+}
+form.panel .panel-body .form-group:last-child {
+  margin-top: 47px;
+}
+
+form.panel .panel-footer {
   border: none;
+  height: 54px;
+  background-color: var(--main-color);
 }
-header form .panel-footer button {
+form.panel .panel-footer button {
   width: 100%;
   height: 100%;
-  background-color: inherit;
   border: inherit;
-  font-size: 15px;
+  will-change: opacity;
+  background-color: inherit;
 }
-header form .panel-footer button:hover {
+form.panel .panel-footer button:hover {
   opacity: 0.8;
 }
 
 /* [3] Brand Bar */
 .brand-bar {
+  padding: 17px 0;
+  min-height: 106px;
   box-shadow: 0px 1px 5px -1px #b7b7b7;
-  padding: 10px 0;
 }
-@media (max-width: 991px) {
-  .brand-bar {
-    display: none;
-  }
+.brand-bar h4 {
+  margin: 0 0 12px;
+}
+.brand-bar p {
+  margin-bottom: 0;
+}
+
+.brand-bar .icons {
+  padding-top: 20px;
 }
 .brand-bar .icons a:not(:last-of-type) {
-  margin-right: calc(45% / 6);
+  margin-right: calc(45% / 7);
 }
 .brand-bar .icons i {
-  line-height: 105px;
   color: #ccc;
 }
-@media (max-width: 767px) {
-  .brand-bar .icons a {
-    margin-top: 20px;
-    display: inline-block;
-  }
-  .brand-bar .icons i {
-    line-height: unset;
+@media (max-width: 575px) {
+  .brand-bar .icons .fa-3x {
+    font-size: 2em;
   }
 }
 .brand-bar .icons .fa-facebook:hover {
@@ -249,7 +285,9 @@ header form .panel-footer button:hover {
   color: #ff6600;
 }
 
-/*------ Features Section ------*/
+/*
+  Features Section
+*/
 .features {
   background-color: #f5f5f5;
 }
@@ -372,7 +410,9 @@ header form .panel-footer button:hover {
   background: url(../imgs/features/3.png) no-repeat center;
 }
 
-/*------ About Section ------*/
+/*
+  About Section
+*/
 @media (max-width: 991px) {
   .about-content > div {
     margin-bottom: 35px;
@@ -393,7 +433,9 @@ header form .panel-footer button:hover {
   margin: 25px 0;
 }
 
-/*------ Pricing Section ------*/
+/*
+  Pricing Section
+*/
 .pricing,
 .pricing .panel-body {
   background-color: #f5f5f5;
@@ -465,7 +507,9 @@ header form .panel-footer button:hover {
   margin-bottom: 1px;
 }
 
-/*------ Review Section ------*/
+/*
+  Review Section
+*/
 
 /* [1] Review Content */
 .review .quote {
@@ -539,7 +583,9 @@ header form .panel-footer button:hover {
   background-color: #fff;
 }
 
-/*------ Contact Section ------*/
+/*
+  Contact Section
+*/
 .contact textarea {
   height: 132px;
   resize: none;
@@ -558,7 +604,9 @@ header form .panel-footer button:hover {
   opacity: 0.9;
 }
 
-/* Footer area */
+/*
+  Footer area
+*/
 footer {
   background-color: #000;
   padding: 30px 0;
