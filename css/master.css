@@ -94,7 +94,7 @@ input.form-control {
   margin: 30px auto;
 }
 .special-heading ~ p {
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 }
 
 /*
@@ -461,13 +461,13 @@ form.panel .panel-footer button:hover {
   width: 100%;
   margin: 0;
 }
-.pricing .col-md-4:nth-of-type(2) .separator {
+.pricing-content > div:nth-of-type(2) .separator {
   height: 40px;
   line-height: 38px;
   font-weight: 700;
   color: #fff;
 }
-.pricing .col-md-4:nth-of-type(2) .panel {
+.pricing-content > div:nth-of-type(2) .panel {
   transform: translateY(-35px);
 }
 @media (max-width: 991px) {
@@ -475,48 +475,55 @@ form.panel .panel-footer button:hover {
     width: 340px;
     margin: 25px auto;
   }
-  .pricing .col-md-4:nth-of-type(2) .panel {
+  .pricing-content > div:nth-of-type(2) .panel {
     transform: translateY(0);
   }
 }
 
-.pricing .panel .panel-title {
-  margin-bottom: 1px;
-  font-size: 20px;
-  height: 59px;
-  line-height: 59px;
-}
 .pricing .panel .panel-title,
 .pricing .panel .panel-heading {
   color: #fff;
   background-color: #333;
   font-weight: 700;
 }
+.pricing .panel .panel-title {
+  margin-bottom: 1px;
+  font-size: 20px;
+  height: 59px;
+  line-height: 59px;
+}
 .pricing .panel .panel-heading {
-  border-radius: 0;
   border: none;
-  padding: 35px 0;
+  border-radius: 0;
 }
 .pricing .panel .panel-heading span {
-  font-family: "Raleway";
-  font-size: 35px;
+  height: 100px;
   display: block;
-  transform: scale(2);
+  font-size: 35px;
+  line-height: 100px;
   margin-bottom: 20px;
+  transform: scale(2);
+  font-family: "Raleway";
 }
-.pricing .panel .panel-heading i {
-  font-weight: 600;
+.pricing .panel .panel-heading em {
   opacity: 0.5;
+  height: 51px;
+  display: block;
+  font-weight: 600;
+  line-height: 51px;
 }
+
 .pricing .panel .panel-body {
+  margin: 0;
   padding: 0;
 }
 .pricing .panel .panel-body li {
+  height: 40px;
+  line-height: 40px;
   background-color: #fff;
-  padding: 10px;
 }
 .pricing .panel .panel-body li:not(:last-of-type) {
-  margin-bottom: 1px;
+  border-bottom: 1px solid #f5f5f5;
 }
 
 /*
