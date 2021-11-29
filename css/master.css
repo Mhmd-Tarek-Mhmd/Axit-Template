@@ -14,11 +14,6 @@ body {
 main section {
   padding: var(--main-padding);
 }
-@media (max-width: 991px) {
-  main section:not(.review) {
-    text-align: center;
-  }
-}
 textarea.form-control,
 input.form-control {
   border: none;
@@ -56,6 +51,8 @@ input.form-control {
 }
 .btn-reverse {
   border: none;
+  height: 46px;
+  border-radius: 4px;
   will-change: opacity;
   transition: opacity 0.3s;
   background-color: var(--main-color);
@@ -269,19 +266,13 @@ form.panel .panel-body .form-group:last-child {
 }
 
 form.panel .panel-footer {
+  padding: 0;
   border: none;
   height: 54px;
-  background-color: var(--main-color);
 }
 form.panel .panel-footer button {
   width: 100%;
   height: 100%;
-  border: inherit;
-  will-change: opacity;
-  background-color: inherit;
-}
-form.panel .panel-footer button:hover {
-  opacity: 0.8;
 }
 
 /* [3] Brand Bar */
@@ -297,40 +288,16 @@ form.panel .panel-footer button:hover {
   margin-bottom: 0;
 }
 
-.brand-bar .icons {
+.brand-bar .social {
   padding-top: 20px;
 }
-.brand-bar .icons a:not(:last-of-type) {
+.brand-bar .social a:not(:last-of-type) {
   margin-right: calc(45% / 7);
 }
-.brand-bar .icons i {
-  color: #ccc;
-}
 @media (max-width: 575px) {
-  .brand-bar .icons .fa-3x {
+  .brand-bar .social .fa-3x {
     font-size: 2em;
   }
-}
-.brand-bar .icons .fa-facebook:hover {
-  color: #1778f2;
-}
-.brand-bar .icons .fa-twitter:hover {
-  color: #1da1f2;
-}
-.brand-bar .icons .fa-google-plus:hover {
-  color: #dc4e41;
-}
-.brand-bar .icons .fa-pinterest:hover {
-  color: #bd081c;
-}
-.brand-bar .icons .fa-instagram:hover {
-  color: #e4405f;
-}
-.brand-bar .icons .fa-stumbleupon:hover {
-  color: #eb4924;
-}
-.brand-bar .icons .fa-rss:hover {
-  color: #ff6600;
 }
 
 /*
@@ -338,6 +305,11 @@ form.panel .panel-footer button:hover {
 */
 .features {
   background-color: #f5f5f5;
+}
+@media (max-width: 991px) {
+  .features {
+    text-align: center;
+  }
 }
 .features .feature .title {
   margin: 0;
@@ -399,6 +371,9 @@ form.panel .panel-footer button:hover {
 }
 .features .feature:first-child p {
   margin: 52px 0 51px;
+}
+.features .feature:first-child button {
+  width: 121px;
 }
 
 /* [3] Feature 2 */
@@ -659,9 +634,7 @@ form.panel .panel-footer button:hover {
 }
 .contact button {
   width: 148px;
-  height: 46px;
   margin-top: 43px;
-  border-radius: 5px;
 }
 
 /*
