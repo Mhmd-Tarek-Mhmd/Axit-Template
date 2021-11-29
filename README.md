@@ -8,8 +8,8 @@
 
 ### 1- Desktop Design
 
-![](screenshots/desktop.png)
+![](Screenshots/desktop.png)
 
 ### 2- Mobile Design
 
-![](screenshots/mobile.png)
+![](Screenshots/mobile.png)
