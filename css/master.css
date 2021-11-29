@@ -529,14 +529,23 @@ form.panel .panel-footer button:hover {
 /*
   Review Section
 */
+@media (max-width: 767px) {
+  .review-content > div:nth-child(even) {
+    margin: 35px 0;
+  }
+}
+.review .customer {
+  margin: auto;
+  width: 273px;
+  max-width: 100%;
+}
 
-/* [1] Review Content */
 .review .quote {
-  background-color: #f5f5f5;
   position: relative;
-  padding: 20px;
+  padding: 25px 15px;
   border-radius: 4px;
   margin-bottom: 25px;
+  background-color: #f5f5f5;
 }
 .review .quote::before {
   content: "";
@@ -546,60 +555,15 @@ form.panel .panel-footer button:hover {
   border-width: 15px;
   border-color: #f5f5f5 transparent transparent;
 }
-.review .customer-info {
-  width: 70%;
-  margin-top: 9px;
-}
-@media (max-width: 991px) {
-  .review-content > div {
-    margin-bottom: 35px;
-  }
-  .review .customer {
-    position: relative;
-    left: 50%;
-    transform: translateX(-40%);
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .review .quote::before {
-    left: calc(50% - 40px);
-    transform: translateX(-50%);
-  }
-  .review .customer-info {
-    width: unset;
-    margin-left: 20px;
-  }
-}
-.review .customer-info > span {
-  display: block;
-}
 
-/* [2] Stylish Section */
-.stylish-section {
-  background-image: url(../imgs/stylish.png);
-  background-size: cover;
-  position: relative;
-  height: 400px;
-  margin-top: 70px;
+.review .customer-image img {
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
 }
-.stylish-section .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -55%);
-  width: 90%;
-}
-.stylish-section .special-heading,
-.stylish-section .paragraph {
-  color: #fff !important;
-  margin: 0;
-}
-.stylish-section .special-heading {
-  padding: 50px 0;
-  margin-bottom: 0;
-}
-.stylish-section .separator {
-  background-color: #fff;
+.review .customer-info .title {
+  display: block;
+  margin-top: 10px;
 }
 
 /*
