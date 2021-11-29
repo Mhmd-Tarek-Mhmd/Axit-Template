@@ -101,6 +101,42 @@ input.form-control {
   margin-bottom: 80px;
 }
 
+.social {
+  --facebook: #1778f2;
+  --twitter: #1da1f2;
+  --google-plus: #1778f2;
+  --pinterest: #bd081c;
+  --instagram: #e4405f;
+  --stumbleupon: #eb4924;
+  --rss: #ff6600;
+}
+.social i {
+  color: #ccc;
+  will-change: color;
+  transition: color 0.3s;
+}
+.social .facebook:hover {
+  color: var(--facebook);
+}
+.social .twitter:hover {
+  color: var(--twitter);
+}
+.social .google-plus:hover {
+  color: var(--google-plus);
+}
+.social .pinterest:hover {
+  color: var(--pinterest);
+}
+.social .instagram:hover {
+  color: var(--instagram);
+}
+.social .stumbleupon:hover {
+  color: var(--stumbleupon);
+}
+.social .rss:hover {
+  color: var(--rss);
+}
+
 /*
   Home Section 
 */
@@ -617,9 +653,9 @@ form.panel .panel-footer button:hover {
   height: 156px;
 }
 @media (max-width: 767px) {
-.contact textarea {
-  margin-top: 30px
-}
+  .contact textarea {
+    margin-top: 30px;
+  }
 }
 .contact button {
   width: 148px;
@@ -632,37 +668,16 @@ form.panel .panel-footer button:hover {
   Footer area
 */
 footer {
-  background-color: #000;
   padding: 30px 0;
-}
-footer span {
-  font-size: 12px;
-  color: #fff;
-  opacity: 0.5;
+  min-height: 101px;
+  background-color: #000;
 }
 footer i {
   margin-right: 15px;
   margin-bottom: 15px;
-  color: #ccc;
 }
-footer .fa-facebook:hover {
-  color: #1778f2;
-}
-footer .fa-twitter:hover {
-  color: #1da1f2;
-}
-footer .fa-google-plus:hover {
-  color: #dc4e41;
-}
-footer .fa-pinterest:hover {
-  color: #bd081c;
-}
-footer .fa-instagram:hover {
-  color: #e4405f;
-}
-footer .fa-stumbleupon:hover {
-  color: #eb4924;
-}
-footer .fa-rss:hover {
-  color: #ff6600;
+footer span {
+  opacity: 0.5;
+  color: #fff;
+  font-size: 12px;
 }
