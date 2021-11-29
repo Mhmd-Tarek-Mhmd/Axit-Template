@@ -2,7 +2,7 @@
 
 ## Live Site
 
-- Live Site ![URL](https://mhmd-tarek-mhmd.github.io/Axit-Template)
+- Live Site [URL](https://mhmd-tarek-mhmd.github.io/Axit-Template)
 
 ## Screenshots
 
